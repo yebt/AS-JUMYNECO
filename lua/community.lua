@@ -10,9 +10,13 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
 
+  --
   { import = "astrocommunity.editing-support.treesj" },
-  { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.file-explorer.mini-files" },
+
+  { import = "astrocommunity.motion.flash-nvim" },
+
+  { import = "astrocommunity.editing-support.amp-nvim" },
 
   --
   { import = "astrocommunity.pack.markdown" },
