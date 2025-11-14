@@ -8,7 +8,7 @@ return {
           ["<Leader>a"] = { "ggVG", desc = "Select All" },
           ["<M-c>"] = {
             function()
-              local bufs = vim.fn.getbufinfo { buflisted = true }
+              local bufs = vim.fn.getbufinfo { buflisted = 1 }
               require("astrocore.buffer").close(0)
               if not bufs[2] then require("snacks").dashboard() end
             end,
@@ -78,6 +78,11 @@ return {
                 },
               }
             end,
+          },
+          ["<M-z><M-z>"] = {
+            function()
+              vim.opt.wrap = not (vim.opt.wrap._value)
+            end, desc = "Toggle wrap text"
           },
         },
       },
