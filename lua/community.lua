@@ -22,6 +22,7 @@ return {
 
   -- Langs
   { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.json" },
   -- { import = "astrocommunity.pack.php" },
   -- { import = "astrocommunity.pack.bash" },
   -- { import = "astrocommunity.pack.astro" },
