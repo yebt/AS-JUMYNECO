@@ -32,7 +32,7 @@ return {
         -- { title = " MRU CWD ", padding = 1 },
         -- { section = "recent_files", cwd = true, limit = 4, padding = 1 },
         -- { title = " KEYS ", padding = 1 },
-        -- { title = "Sessions", padding = 1 },
+        { title = "Sessions", padding = 1 },
         { section = "projects", padding = 1 },
         -- { title = "Bookmarks", padding = 1 },
         { section = "keys", padding = 2 },

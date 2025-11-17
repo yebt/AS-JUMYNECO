@@ -1,9 +1,10 @@
 return { -- override blink.cmp plugin
   "Saghen/blink.cmp",
   opts = {
-    keymap = {
-      -- ["<Tab>"] = { "snippet_forward", "fallback" },
-    },
+    -- keymap = {
+    --   -- ["<Tab>"] = { "snippet_forward", "fallback" },
+    --   ["<M-k>"] = { "show_signature", "fallback" },
+    -- },
     -- completion = {
     --   menu = {
     --     border = "",
@@ -48,6 +49,14 @@ return { -- override blink.cmp plugin
     },
     cmdline = {
       enabled = false,
+    },
+
+    signature = {
+      enabled = true,
+
+  trigger = {
+    enabled = false,
+      }
     },
   },
 }

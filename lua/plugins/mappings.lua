@@ -6,6 +6,9 @@ return {
       mappings = {
         n = {
           ["<Leader>a"] = { "ggVG", desc = "Select All" },
+          ["<M-a>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Next buffer" },
+          ["<M-d>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+          ["<M-s>"] = { function() require("astrocore.buffer").prev() end, desc = "Go to previous buffer" },
           ["<M-c>"] = {
             function()
               local bufs = vim.fn.getbufinfo { buflisted = 1 }
@@ -42,7 +45,7 @@ return {
                   hidden = { "preview" },
                   layout = {
                     box = "horizontal",
-                    backdrop = 80,
+                    backdrop = 30,
                     -- width = 0.8,
                     width = function() return vim.o.columns >= 120 and 0.6 or 0.9 end,
                     height = 0.4,
@@ -79,11 +82,63 @@ return {
               }
             end,
           },
-          ["<M-z><M-z>"] = {
+          ["<M-o>"] = {
             function()
-              vim.opt.wrap = not (vim.opt.wrap._value)
-            end, desc = "Toggle wrap text"
+              require("snacks").picker.lsp_symbols {
+                prompt = " ",
+                show_delay = 10,
+                layout = {
+                  cycle = true,
+                  -- preview = nil,
+                  hidden = { "preview" },
+                  layout = {
+                    box = "horizontal",
+                    backdrop = 30,
+                    -- width = 0.8,
+                    width = function() return vim.o.columns >= 120 and 0.6 or 0.9 end,
+                    height = 0.8,
+                    border = "none",
+                    {
+                      box = "vertical",
+                      {
+                        win = "input",
+                        title = "{title} {live} {flags}",
+                        title_pos = "center",
+                        border = "rounded",
+                        height = 1,
+                      },
+                      { win = "list", title = " Results ", title_pos = "center", border = "none" },
+                    },
+                    {
+                      win = "preview",
+                      title = "{preview:Preview}",
+                      width = 0.45,
+                      -- border = "rounded",
+                      border = "none",
+                      title_pos = "center",
+                    },
+                  },
+                },
+
+                formatters = {
+                  file = {
+                    filename_first = true,
+                    truncate = "center",
+                    git_status_hl = false,
+                  },
+                },
+              }
+            end,
           },
+          ["<Leader>R"] = {
+            function()
+              require("snacks").picker.recent {}
+            end,
+          },
+          -- ["<M-z><M-z>"] = {
+          --   function() vim.opt.wrap = not vim.opt.wrap._value end,
+          --   desc = "Toggle wrap text",
+          -- },
         },
       },
     },
