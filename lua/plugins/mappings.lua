@@ -5,7 +5,11 @@ return {
     opts = {
       mappings = {
         n = {
+          --
           ["<Leader>a"] = { "ggVG", desc = "Select All" },
+          --
+          ["<Leader>rw"] = { ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", desc = "Replace cursor word in the document" },
+          --
           ["<M-a>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Next buffer" },
           ["<M-d>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
           ["<M-s>"] = { function() require("astrocore.buffer").prev() end, desc = "Go to previous buffer" },
@@ -17,6 +21,7 @@ return {
             end,
             desc = "Close buffer",
           },
+          ---
           -- ["<M-c>"] = { "<Leader>c", desc = "Delete buffer" },
           -- ["<M-d>"] = { "]b", desc = "Delete buffer" },
           -- ["<M-s>"] = { "<cmd>b#<cr>", desc = "Delete buffer" },
@@ -131,9 +136,7 @@ return {
             end,
           },
           ["<Leader>R"] = {
-            function()
-              require("snacks").picker.recent {}
-            end,
+            function() require("snacks").picker.recent {} end,
           },
           -- ["<M-z><M-z>"] = {
           --   function() vim.opt.wrap = not vim.opt.wrap._value end,
