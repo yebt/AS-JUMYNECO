@@ -1,10 +1,11 @@
 return { -- override blink.cmp plugin
   "Saghen/blink.cmp",
   opts = {
-    -- keymap = {
-    --   -- ["<Tab>"] = { "snippet_forward", "fallback" },
-    --   ["<M-k>"] = { "show_signature", "fallback" },
-    -- },
+    keymap = {
+      ["<Tab>"] = { "snippet_forward", "fallback" },
+      ["<M-k>"] = { "show_signature", "fallback" },
+      ["<C-L>"] = { function(cmp) cmp.show({ providers = { 'snippets' } }) end },
+    },
     -- completion = {
     --   menu = {
     --     border = "",
