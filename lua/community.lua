@@ -19,6 +19,7 @@ return {
   -- { import = "astrocommunity.project.neoconf-nvim" }, -- already included in astro
   -- Utils
   { import = "astrocommunity.editing-support.amp-nvim" },
+  { import = "astrocommunity.syntax.vim-easy-align" },
 
   -- Langs
   { import = "astrocommunity.pack.markdown" },
