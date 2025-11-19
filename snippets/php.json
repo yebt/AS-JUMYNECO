@@ -36,5 +36,11 @@
         "\t$0",
         "}"
     ]
+  },
+  "requirevendor": {
+    "prefix": "reqven",
+    "body":[
+      "require __DIR__ . \"$0/vendor/autoload.php\";"
+    ]
   }
 }
