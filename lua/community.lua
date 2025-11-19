@@ -13,6 +13,7 @@ return {
   -- Behaviour
   { import = "astrocommunity.editing-support.treesj" },
   { import = "astrocommunity.motion.flash-nvim" },
+  { import = "astrocommunity.workflow.hardtime-nvim" },
   -- IDE
   { import = "astrocommunity.file-explorer.mini-files" },
   -- { import = "astrocommunity.project.project-nvim" },
