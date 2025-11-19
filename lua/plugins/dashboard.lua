@@ -3,10 +3,11 @@ return {
   opts = {
     dashboard = {
       preset = {
-        header = table.concat({
-          "░█░█░█▄█░█░█░",
-          "░▀▀▀░▀░▀░▀▀▀░",
-        }, "\n"),
+        header = "#<complex>#",
+        -- header = table.concat({
+        --   "░█░█░█▄█░█░█░",
+        --   "░▀▀▀░▀░▀░▀▀▀░",
+        -- }, "\n"),
 
         keys = {
           { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
@@ -24,7 +25,7 @@ return {
       },
 
       sections = {
-        -- { section = "header" },
+        { section = "header", padding = 1 },
         -- { section = "terminal", cmd = "fortune -s | cowsay", hl = "header", padding = 1, indent = 8 },
         { title = " MRU ", padding = 1 },
         { section = "recent_files", limit = 5, padding = 1 },
@@ -34,7 +35,7 @@ return {
         -- { title = " KEYS ", padding = 1 },
         -- { title = "Sessions", padding = 1 },
         -- { section = "projects", padding = 1 },
-        -- { title = "Bookmarks", padding = 1 },
+        { title = " Bookmarks", padding = 1 },
         { section = "keys", padding = 1 },
         { section = "startup" },
       },
