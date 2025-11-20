@@ -1,10 +1,16 @@
 return { -- override blink.cmp plugin
   "Saghen/blink.cmp",
+  dependencies = {
+    {
+      "mikavilpas/blink-ripgrep.nvim",
+      version = "*", -- use the latest stable version
+    },
+  },
   opts = {
     keymap = {
       ["<Tab>"] = { "snippet_forward", "fallback" },
       ["<M-k>"] = { "show_signature", "fallback" },
-      ["<C-L>"] = { function(cmp) cmp.show({ providers = { 'snippets' } }) end },
+      ["<C-L>"] = { function(cmp) cmp.show { providers = { "snippets" } } end },
     },
     -- completion = {
     --   menu = {
@@ -55,9 +61,24 @@ return { -- override blink.cmp plugin
     signature = {
       enabled = true,
 
-  trigger = {
-    enabled = false,
-      }
+      trigger = {
+        enabled = false,
+      },
+    },
+    sources = {
+      default = {
+        "ripgrep",
+      },
+      providers = {
+        ripgrep = {
+          module = "blink-ripgrep",
+          name = "Ripgrep",
+          -- see the full configuration below for all available options
+          ---@module "blink-ripgrep"
+          ---@type blink-ripgrep.Options
+          opts = {},
+        },
+      },
     },
   },
 }
