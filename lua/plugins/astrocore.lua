@@ -45,9 +45,16 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = true, -- sets vim.opt.wrap
-        clipboard = "unnamed"
+        clipboard = "unnamed",
+        spelllang = "en,es",
+        -- spelloptions = "camel",
+        -- spellfile = {
+        --   vim.fs.joinpath(vim.fn.stdpath "config", "spell/en.utf-8.add"),
+        --   vim.fs.joinpath(vim.fn.stdpath "config", "spell/es.utf-8.add"),
+        -- },
       },
       g = { -- vim.g.<key>
+        -- ["spellfile_URL"] = "https://ftp.nluug.nl/vim/runtime/spell/",
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
