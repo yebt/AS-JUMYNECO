@@ -31,6 +31,15 @@ return {
             end,
             desc = "Explorer",
           },
+          ["¿"] = {
+
+            function()
+              if not require("mini.files").close() then
+                require("mini.files").open(vim.api.nvim_buf_get_name(0), false)
+              end
+            end,
+            desc = "Explorer in filepath",
+          },
           ["×"] = {
             function()
               if not require("mini.files").close() then
