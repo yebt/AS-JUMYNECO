@@ -11,6 +11,7 @@ return { -- override blink.cmp plugin
       ["<Tab>"] = { "snippet_forward", "fallback" },
       ["<M-k>"] = { "show_signature", "fallback" },
       ["<C-L>"] = { function(cmp) cmp.show { providers = { "snippets" } } end },
+      [""] = { function(cmp) cmp.show { providers = { "ripgrep" } } end },
     },
     -- completion = {
     --   menu = {
@@ -66,9 +67,9 @@ return { -- override blink.cmp plugin
       },
     },
     sources = {
-      default = {
-        "ripgrep",
-      },
+      -- default = {
+      --   "ripgrep",
+      -- },
       providers = {
         ripgrep = {
           module = "blink-ripgrep",
