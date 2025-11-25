@@ -14,15 +14,21 @@ return {
   { import = "astrocommunity.editing-support.treesj" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
+
   -- IDE
   { import = "astrocommunity.file-explorer.mini-files" },
+  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   -- { import = "astrocommunity.project.project-nvim" },
   -- { import = "astrocommunity.project.neoconf-nvim" }, -- already included in astro
-  -- Utils
+
+  --- Utils
   { import = "astrocommunity.editing-support.amp-nvim" },
   { import = "astrocommunity.syntax.vim-easy-align" },
 
-  -- Langs
+  --- LSP
+  -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
+
+  --- Langs
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.typescript" },
