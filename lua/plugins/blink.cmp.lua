@@ -53,7 +53,7 @@ return { -- override blink.cmp plugin
     },
 
     appearance = {
-      nerd_font_variant = "mono",
+      nerd_font_variant = "normal",
     },
     cmdline = {
       enabled = false,
