@@ -39,7 +39,7 @@ return {
       local on_choice = function(itemsS)
         vim.print(itemsS)
         if #itemsS == 0 then
-          vim.notify("No items selected")
+          vim.notify "No items selected"
           return
         end
         gitignore.createGitignoreBuffer(path, itemsS, 0, overwrite)
@@ -74,13 +74,11 @@ return {
           end,
         },
         actions = {
-          confirm = function(picker,selected)
+          confirm = function(picker, selected)
             if completed then return end
             completed = true
             local selectedItems = vim.tbl_map(function(el) return el.item end, picker:selected())
-            if #selectedItems == 0 then
-              selectedItems = {selected}
-            end
+            if #selectedItems == 0 then selectedItems = { selected } end
             picker:close()
             vim.schedule(function() on_choice(selectedItems) end)
           end,

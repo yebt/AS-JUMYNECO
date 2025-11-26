@@ -2,7 +2,7 @@ return {
   "nvim-mini/mini.align",
   -- event = {"VeryLazy"},
   keys = {
-    {"ga", mode = {"x", "n"}}
+    { "ga", mode = { "x", "n" } },
   },
   version = "*",
   -- No need to copy this inside `setup()`. Will be used automatically.

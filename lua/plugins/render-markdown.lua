@@ -18,6 +18,6 @@ return {
     },
   },
   opts = {
-    preset = 'lazy',
+    preset = "lazy",
   },
 }
