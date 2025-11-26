@@ -23,6 +23,7 @@ return {
 
   --- Utils
   { import = "astrocommunity.editing-support.amp-nvim" },
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
   -- { import = "astrocommunity.syntax.vim-easy-align" },
 
   --- LSP
