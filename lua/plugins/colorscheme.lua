@@ -77,8 +77,8 @@ return {
 
   {
     "scottmckendry/cyberdream.nvim",
-    lazy = false,
-    priority = 1000,
+    -- lazy = false,
+    -- priority = 1000,
   },
 
   -- {
