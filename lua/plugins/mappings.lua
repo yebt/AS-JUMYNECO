@@ -7,8 +7,31 @@ return {
         n = {
           --
           ["<Leader>a"] = { "ggVG", desc = "Select All" },
+          ["<Leader>y"] = { '"+y', desc = "Stast call Copy to clipboard" },
+          ["<M-b>"] = {
+            function() require("snacks").explorer() end,
+            desc = "Open files with snack",
+          },
+          ["<M-r>"] = {
+            function() require("snacks").explorer.reveal() end,
+            desc = "Open files with snack",
+          },
+          ["<Tab><Tab>"] = {
+            function()
+              require("snacks").picker.buffers {
+                -- layout = { preset = "sidebar", layout = { position = "right" } },
+                layout = {
+                  preset = "vscode",
+                },
+              }
+            end,
+            desc = "Find buffers",
+          },
           --
-          ["<Leader>rw"] = { ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", desc = "Replace cursor word in the document" },
+          ["<Leader>rw"] = {
+            ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>",
+            desc = "Replace cursor word in the document",
+          },
           --
           ["<M-a>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Next buffer" },
           ["<M-d>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
@@ -151,6 +174,9 @@ return {
           --   function() vim.opt.wrap = not vim.opt.wrap._value end,
           --   desc = "Toggle wrap text",
           -- },
+        },
+        x = {
+          ["<Leader>y"] = { '"+y', desc = "Copy to clipboard" },
         },
       },
     },
