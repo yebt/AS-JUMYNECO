@@ -10,7 +10,14 @@ return { -- override blink.cmp plugin
     keymap = {
       ["<Tab>"] = { "snippet_forward", "fallback" },
       ["<M-k>"] = { "show_signature", "fallback" },
-      ["<C-L>"] = { function(cmp) cmp.show { providers = { "snippets" } } end },
+      ["<C-L>"] = {
+        function(cmp)
+          cmp.show {
+            providers = { "snippets" },
+            initial_selected_item_idx = 1,
+          }
+        end,
+      },
       [""] = { function(cmp) cmp.show { providers = { "ripgrep" } } end },
     },
     -- completion = {
