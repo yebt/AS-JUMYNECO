@@ -3,7 +3,7 @@ return {
   opts = {
     notifier = {
       -- compact, minimal, fancy
-      style = "fancy",
+      -- style = "fancy",
     },
   },
   -- init = function()
