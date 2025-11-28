@@ -28,6 +28,17 @@ return {
 
   --- LSP
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
+  { import = "astrocommunity.test.neotest" },
+
+  --- UI
+  -- { import = "astrocommunity.recipes.picker-nvchad-theme" },
+  -- { import = "astrocommunity.recipes.telescope-nvim-snacks" },
+  -- { import = "astrocommunity.recipes.disable-borders" },
+  -- { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
+  -- { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
+  -- { import = "astrocommunity.recipes.heirline-clock-statusline" },
+  -- { import = "astrocommunity.recipes.heirline-tabline-buffer-number" },
+  -- { import = "astrocommunity.recipes.heirline-vscode-winbar" },
 
   --- Langs
   { import = "astrocommunity.pack.markdown" },
