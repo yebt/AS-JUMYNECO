@@ -6,7 +6,8 @@ return {
     opts = {
       -- colorscheme = "kanagawa",
       -- colorscheme = "citruszest",
-      colorscheme = "cyberdream",
+      -- colorscheme = "cyberdream",
+      colorscheme = "onedark",
       -- colorscheme = "kanagawa",
       -- colorscheme = "everblush",
       -- colorscheme = "monokai-pro",
@@ -81,6 +82,29 @@ return {
     lazy = true,
     -- lazy = false,
     -- priority = 1000,
+  },
+
+  {
+    "navarasu/onedark.nvim",
+    lazy = true,
+    opts = {
+      toggle_style_key = "<M-t>", -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "<leader>ts"
+      toggle_style_list = { "dark", "darker", "cool", "deep", "warm", "warmer", "light" }, -- List of styles to toggle between
+      style = "warmer",
+      code_style = {
+        comments = "italic",
+        keywords = "bold",
+        functions = "none",
+        strings = "italic",
+        variables = "none",
+      },
+      cmp_itemkind_reverse = true,
+      ending_tildes = true,
+    },
+    config = function(_, opts)
+      require("onedark").setup(opts)
+      -- require("onedark").load()
+    end,
   },
 
   -- {
