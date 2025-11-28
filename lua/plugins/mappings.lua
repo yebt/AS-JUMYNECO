@@ -7,7 +7,8 @@ return {
         n = {
           --
           ["<Leader>a"] = { "ggVG", desc = "Select All" },
-          ["<Leader>y"] = { '"+y', desc = "Stast call Copy to clipboard" },
+          ["<Leader>y"] = { '"+y', desc = "Copy to clipboard" },
+          ["<Leader>Y"] = { '"+Y', desc = "Copy to clipboard" },
           ["<M-b>"] = {
             function() require("snacks").explorer() end,
             desc = "Open files with snack",
