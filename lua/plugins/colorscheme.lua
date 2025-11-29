@@ -4,13 +4,16 @@ return {
     "AstroNvim/astroui",
     ---@type AstroUIOpts
     opts = {
+      colorscheme = "astrodark",
+      -- colorscheme = "tokyonight",
       -- colorscheme = "kanagawa",
       -- colorscheme = "citruszest",
       -- colorscheme = "cyberdream",
-      colorscheme = "onedark",
+      -- colorscheme = "onedark",
       -- colorscheme = "kanagawa",
       -- colorscheme = "everblush",
       -- colorscheme = "monokai-pro",
+      -- colorscheme = "vitesse",
     },
   },
 
@@ -105,6 +108,19 @@ return {
       require("onedark").setup(opts)
       -- require("onedark").load()
     end,
+  },
+
+  {
+    "https://codeberg.org/pdewey/vitesse-nvim",
+    priority = 1000,
+  },
+
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = {
+      style = "night",
+    },
   },
 
   -- {
