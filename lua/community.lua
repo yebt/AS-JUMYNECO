@@ -30,6 +30,10 @@ return {
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   { import = "astrocommunity.test.neotest" },
 
+  --- Colors
+  { import = "astrocommunity.colorscheme.catppuccin" },
+  -- { import = "astrocommunity.colorscheme.github-nvim-theme" },
+
   --- UI
   -- { import = "astrocommunity.recipes.picker-nvchad-theme" },
   -- { import = "astrocommunity.recipes.telescope-nvim-snacks" },
@@ -48,4 +52,7 @@ return {
   -- { import = "astrocommunity.pack.php" },
   -- { import = "astrocommunity.pack.bash" },
   -- { import = "astrocommunity.pack.astro" },
+
+  --
+  -- { import = "astrocommunity.bars-and-lines.wakastat" },
 }
