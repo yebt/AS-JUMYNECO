@@ -5,6 +5,8 @@ return {
     opts = {
       mappings = {
         n = {
+          ["<Leader>o"] = { "o<esc>O<cr>", desc = "Add line beetween below" },
+          ["<Leader>O"] = { "O<esc>O<cr>", desc = "Add line beetween abobe" },
           --
           ["<Leader>a"] = { "ggVG", desc = "Select All" },
           ["<Leader>y"] = { '"+y', desc = "Copy to clipboard" },
