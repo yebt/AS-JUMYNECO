@@ -19,15 +19,21 @@
       },
       {
         "language": [
+          "python"
+        ],
+        "path": "./python.json"
+      },
+      {
+        "language": [
           "php"
         ],
         "path": "./php.json"
       },
       {
         "language": [
-          "python"
+          "markdown"
         ],
-        "path": "./python.json"
+        "path": "./markdown.json"
       },
       {
         "language": [

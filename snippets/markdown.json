@@ -1,0 +1,7 @@
+{
+  "codeblock:python!": {
+    "prefix": "codeblock:python",
+    "body": ["```python", "$0", "```"],
+    "description": "Initial file"
+  }
+}
