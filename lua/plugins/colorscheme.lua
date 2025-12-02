@@ -10,12 +10,13 @@ return {
       -- colorscheme = "tokyonight",
       -- colorscheme = "kanagawa",
       -- colorscheme = "citruszest",
-      colorscheme = "cyberdream",
+      -- colorscheme = "cyberdream",
       -- colorscheme = "onedark",
       -- colorscheme = "kanagawa",
       -- colorscheme = "everblush",
       -- colorscheme = "monokai-pro",
       -- colorscheme = "vitesse",
+      colorscheme = "catppuccin",
     },
   },
 
@@ -148,4 +149,79 @@ return {
   },
 
   --
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+
+    --prism-scheme: dark;
+    --prism-foreground: #d4cfbf;
+    --prism-background: #1e1e1e;
+    --prism-comment: #758575;
+    --prism-string: #d48372;
+    --prism-literal: #429988;
+    --prism-keyword: #4d9375;
+    --prism-function: #a1b567;
+    --prism-deleted: #a14f55;
+    --prism-class: #54b1bf;
+    --prism-builtin: #e0a569;
+    --prism-property: #dd8e6e;
+    --prism-namespace: #db889a;
+    --prism-punctuation: #858585;
+    --prism-decorator: #bd8f8f;
+    --prism-number: #6394bf;
+    --prism-boolean: #1c6b48;
+    --prism-variable: #c2b36e;
+    --prism-regex: #ab5e3f;
+    --prism-json-property: #6b8b9e;
+    --prism-line-number: #888888;
+    --prism-line-number-gutter: #eeeeee;
+    --prism-line-highlight-background: #444444;
+    --prism-selection-background: #444444;
+
+    opts = {
+      color_overrides = {
+        mocha = {
+          rosewater = "#bd8f8f",
+          flamingo  = "#ab5e3f",
+          pink      = "#d48372",
+          mauve     = "#a1b567",
+          red       = "#a14f55",
+          maroon    = "#db889a",
+          peach     = "#dd8e6e",
+          -- yellow    = "#e0a569",
+          yellow    = "#FCCA46",
+          green     = "#4d9375",
+          teal      = "#429988",
+          sky       = "#54b1bf",
+          sapphire  = "#6394bf",
+          blue      = "#6b8b9e",
+          lavender  = "#c2b36e",
+          text      = "#d4cfbf",
+          subtext1  = "#889688",
+          subtext0  = "#758575",
+          overlay2  = "#858585",
+          overlay1  = "#756d6d",
+          overlay0  = "#63775E",
+          surface2  = "#444444",
+          surface1  = "#313131",
+          surface0  = "#2d2d2d",
+          -- base      = "#1e1e1e",
+          base      = "#111111",
+          mantle    = "#232323",
+          crust     = "#111111",
+        },
+      },
+      -- custom_highlights = {},
+      -- custom_highlights = function(C)
+      --   return {
+      --   }
+      -- end,
+
+      integrations = {
+        blink_cmp = {
+          style = "bordered",
+        },
+      },
+    },
+  },
 }
