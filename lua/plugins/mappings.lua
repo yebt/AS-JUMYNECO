@@ -12,7 +12,7 @@ return {
           ["<Leader>y"] = { '"+y', desc = "Copy to clipboard" },
           ["<Leader>Y"] = { '"+y$', desc = "Copy to clipboard" },
           --
-          ["<C-k>"] = {
+          ["<C-k><C-w>"] = {
             function()
               require("astrocore.buffer").close_all()
               local bufs = vim.fn.getbufinfo { buflisted = 1 }
