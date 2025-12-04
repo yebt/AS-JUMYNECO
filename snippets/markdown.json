@@ -3,5 +3,10 @@
     "prefix": "codeblock:python",
     "body": ["```python", "$0", "```"],
     "description": "Initial file"
+  },
+  "codeblock:sh!": {
+    "prefix": "codeblock:wsh",
+    "body": ["```sh", "$0", "```"],
+    "description": "Initial file"
   }
 }
