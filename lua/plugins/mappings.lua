@@ -11,6 +11,16 @@ return {
           ["<Leader>a"] = { "ggVG", desc = "Select All" },
           ["<Leader>y"] = { '"+y', desc = "Copy to clipboard" },
           ["<Leader>Y"] = { '"+y$', desc = "Copy to clipboard" },
+          --
+          ["<C-k>"] = {
+            function()
+              require("astrocore.buffer").close_all()
+              local bufs = vim.fn.getbufinfo { buflisted = 1 }
+              if not bufs[2] then require("snacks").dashboard() end
+            end,
+            desc = "Close all buffers",
+          },
+          --
           ["<M-b>"] = {
             function() require("snacks").explorer() end,
             desc = "Open files with snack",
