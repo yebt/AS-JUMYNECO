@@ -1,12 +1,27 @@
 {
   "codeblock:python!": {
     "prefix": "codeblock:python",
-    "body": ["```python", "$0", "```"],
+    "body": [
+      "```python",
+      "$0",
+      "```"
+    ],
     "description": "Initial file"
   },
   "codeblock:sh!": {
     "prefix": "codeblock:wsh",
-    "body": ["```sh", "$0", "```"],
+    "body": [
+      "```sh",
+      "$0",
+      "```"
+    ],
     "description": "Initial file"
+  },
+  "markdown lint disable line legth rule": {
+    "prefix": "markdownlint-disable-13",
+    "body": [
+      "<!-- markdownlint-disable MD013-->"
+    ],
+    "description": "Disable markdown lint rule of max line lenght"
   }
 }
