@@ -45,5 +45,7 @@ return {
         :with_move(function(options) return options.prev_char:match ".%]" ~= nil end)
         :use_key "]",
     }
+
+    npairs.add_rule(Rule("/**", " */", "php"))
   end,
 }
