@@ -20,9 +20,10 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = false, -- enable or disable format on save globally
+        enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-          -- "go",
+          "go",
+          "lua",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
@@ -40,11 +41,13 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+      "intelephense",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      -- intelephense = {},
     },
     -- customize how language servers are attached
     handlers = {
@@ -54,7 +57,7 @@ return {
       -- the key is the server that is being setup with `lspconfig`
       -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
       -- pyright = function(_, opts) require("lspconfig").pyright.setup(opts) end -- or a custom handler function can be passed
-      -- phpactor = false,
+      phpactor = false,
     },
     -- Configure buffer local auto commands to add when attaching a language server
     autocmds = {
