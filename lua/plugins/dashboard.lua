@@ -3,11 +3,19 @@ return {
   opts = {
     dashboard = {
       preset = {
-        header = "#<complex>#",
+        -- header = "#<complex>#",
+        -- header = table.concat({
+        --   ">o)",
+        --   "(_>",
+        -- }, "\n"),
         -- header = table.concat({
         --   "░█░█░█▄█░█░█░",
         --   "░▀▀▀░▀░▀░▀▀▀░",
         -- }, "\n"),
+        header = table.concat({
+          "░▄█▄█▄",
+          "░░▀░▀░",
+        }, "\n"),
 
         keys = {
           { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
@@ -26,17 +34,17 @@ return {
 
       sections = {
         { section = "header", padding = 1 },
-        -- { section = "terminal", cmd = "fortune -s | cowsay", hl = "header", padding = 1, indent = 8 },
-        { title = " MRU ", padding = 1 },
-        { section = "recent_files", limit = 5, padding = 1 },
-        -- { title = "MRU ", file = vim.fn.fnamemodify(".", ":~"), padding = 1 },
-        { title = " MRU CWD ", padding = 1 },
-        { section = "recent_files", cwd = true, limit = 5, padding = 1 },
-        -- { title = " KEYS ", padding = 1 },
-        -- { title = "Sessions", padding = 1 },
-        -- { section = "projects", padding = 1 },
-        { title = " Bookmarks", padding = 1 },
-        { section = "keys", padding = 1 },
+        -- -- { section = "terminal", cmd = "fortune -s | cowsay", hl = "header", padding = 1, indent = 8 },
+        -- { title = " MRU ", padding = 1 },
+        -- { section = "recent_files", limit = 5, padding = 1 },
+        -- -- { title = "MRU ", file = vim.fn.fnamemodify(".", ":~"), padding = 1 },
+        -- { title = " MRU CWD ", padding = 1 },
+        -- { section = "recent_files", cwd = true, limit = 5, padding = 1 },
+        -- -- { title = " KEYS ", padding = 1 },
+        -- -- { title = "Sessions", padding = 1 },
+        -- -- { section = "projects", padding = 1 },
+        -- { title = " Bookmarks", padding = 1 },
+        -- { section = "keys", padding = 1 },
         { section = "startup" },
       },
     },
