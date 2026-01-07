@@ -14,6 +14,7 @@ return {
   { import = "astrocommunity.editing-support.treesj" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
+  { import = "astrocommunity.comment.ts-comments-nvim" },
 
   -- IDE
   { import = "astrocommunity.file-explorer.mini-files" },
