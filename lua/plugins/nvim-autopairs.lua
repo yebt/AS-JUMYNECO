@@ -47,5 +47,6 @@ return {
     }
 
     npairs.add_rule(Rule("/**", " */", "php"))
+    npairs.add_rule(Rule("<", ">", "typescript"))
   end,
 }
