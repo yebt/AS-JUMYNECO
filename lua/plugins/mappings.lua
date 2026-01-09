@@ -55,7 +55,7 @@ return {
             function()
               local bufs = vim.fn.getbufinfo { buflisted = 1 }
               require("astrocore.buffer").close(0)
-              if not bufs[2] then require("snacks").dashboard() end
+              -- if not bufs[2] then require("snacks").dashboard() end
             end,
             desc = "Close buffer",
           },
