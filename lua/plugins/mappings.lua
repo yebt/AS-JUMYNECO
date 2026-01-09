@@ -3,6 +3,7 @@ return {
     "AstroNvim/astrocore",
     ---@type AstroCoreOpts
     opts = {
+
       mappings = {
         n = {
           ["<Leader>o"] = { "o<esc>O<cr>", desc = "Add line beetween below" },
@@ -15,9 +16,9 @@ return {
           ["<C-k><C-w>"] = {
             function()
               require("astrocore.buffer").close_all()
-              vim.cmd "bd"
-              local bufs = vim.fn.getbufinfo { buflisted = 1 }
-              if not bufs[2] then require("snacks").dashboard() end
+              -- vim.cmd "bd"
+              -- local bufs = vim.fn.getbufinfo { buflisted = 1 }
+              -- if not bufs[2] then require("snacks").dashboard() end
             end,
             desc = "Close all buffers",
           },
