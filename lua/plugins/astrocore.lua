@@ -38,6 +38,7 @@ return {
       },
       pattern = {
         [".*/etc/foo/.*"] = "fooscript",
+        [".*%.component%.html"] = "htmlangular",
       },
     },
     -- vim options can be configured here
@@ -121,6 +122,15 @@ return {
             end
           end,
         },
+        --
+        -- {
+        --   event = "FileType",
+        --   pattern = "htmlangular",
+        --   callback = function()
+        --     require("luasnip").filetype_extend("typescript", { "angular" })
+        --     require("luasnip").filetype_extend("html", { "angular" })
+        --   end,
+        -- },
       },
     },
   },
