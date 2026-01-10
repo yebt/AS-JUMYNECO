@@ -43,6 +43,12 @@
       },
       {
         "language": [
+          "angular"
+        ],
+        "path": "./angular/html.json"
+      },
+      {
+        "language": [
           "all"
         ],
         "path": "./global.json"
