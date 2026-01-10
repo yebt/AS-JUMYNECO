@@ -38,7 +38,7 @@ return {
       },
       pattern = {
         [".*/etc/foo/.*"] = "fooscript",
-        [".*%.component%.html"] = "htmlangular",
+        -- [".*%.component%.html"] = "htmlangular",
       },
     },
     -- vim options can be configured here
