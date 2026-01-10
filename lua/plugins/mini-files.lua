@@ -39,7 +39,7 @@ return {
 
                     vim.keymap.set("n", "gX", ui_open, { buffer = buf_id, desc = "OS open" })
                     vim.keymap.set("n", "gy", yank_path, { buffer = buf_id, desc = "Yank path" })
-                    vim.keymap.set("n", "p", togglePreview, { buffer = buf_id, desc = "Toggle preview" })
+                    -- vim.keymap.set("n", "p", togglePreview, { buffer = buf_id, desc = "Toggle preview" })
                   end,
                 },
                 {
