@@ -14,6 +14,18 @@ return {
           "AstroNvim/astrocore",
           ---@type AstroCoreOpts
           opts = {
+            mappings = {
+              n = {
+                ["<Leader>E"] = {
+                  function()
+                    if not require("mini.files").close() then
+                      require("mini.files").open(vim.api.nvim_buf_get_name(0))
+                    end
+                  end,
+                  desc = "Explorer",
+                },
+              },
+            },
             autocmds = {
               mini_files_mapping_actions = {
                 {
