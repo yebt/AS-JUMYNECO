@@ -10,6 +10,7 @@ return {
   "AstroNvim/astrolsp",
   ---@type AstroLSPOpts
   opts = {
+
     -- Configuration table of features provided by AstroLSP
     features = {
       codelens = true, -- enable/disable codelens refresh on start
@@ -58,7 +59,28 @@ return {
       -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
       -- pyright = function(_, opts) require("lspconfig").pyright.setup(opts) end -- or a custom handler function can be passed
       phpactor = false,
+
+      --- add some actions
+      -- angularls = function(_, opts)
+      --   require("lspconfig").angularls.setup(opts)
+      --   vim.lsp.commands["angular.goToComponentWithTemplateFile"] = function(some, ctx)
+      --     ---- some
+      --     vim.print {
+      --       some = some,
+      --       ctx = ctx,
+      --     }
+      --   end
+      -- end,
     },
+
+    -- lsp_handlers = {
+    --   -- NOTE: works
+    --   -- ["textDocument/publishDiagnostics"] = function(...) vim.notify "a" end, -- customize a handler with a custom function
+    --
+    --   -- ["workspace/executeCommand"] = function(err, result, ctx, config) vim.notify "ax2" end,
+    --   -- ["textDocument/codeLens"] = function(err, result, ctx, config) vim.notify "ax2" end,
+    -- },
+    --
     -- Configure buffer local auto commands to add when attaching a language server
     autocmds = {
       -- first key is the `augroup` to add the auto commands to (:h augroup)
