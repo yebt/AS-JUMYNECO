@@ -31,12 +31,13 @@ return {
             vim.keymap.set("n", "<leader>AT", ng.get_template_tcb, {})
 
             -- vim.lsp.commands["angular.goToComponentWithTemplateFile"] = function(command, ctx)
-            vim.lsp.commands["angular.goToComponentWithTemplateFile"] = function(command, ctx)
-              ng.goto_component_with_template_file()
+            vim.lsp.commands["angular.goToComponentWithTemplateFile"] = function(_, _)
+              ng.goto_component_with_template_file {}
             end
 
-            vim.lsp.commands["angular.goToTemplateForComponent"] = function(command, ctx)
-              ng.goto_template_for_component()
+            vim.lsp.commands["angular.goToTemplateForComponent"] = function(_, _)
+              --
+              ng.goto_template_for_component {}
             end
 
             vim.lsp.commands["angular.applyCompletionCodeAction"] = function(command, ctx)
