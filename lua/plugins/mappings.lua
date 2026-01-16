@@ -13,15 +13,15 @@ return {
           ["<Leader>y"] = { '"+y', desc = "Copy to clipboard" },
           ["<Leader>Y"] = { '"+y$', desc = "Copy to clipboard" },
           --
-          ["<C-k><C-w>"] = {
-            function()
-              require("astrocore.buffer").close_all()
-              -- vim.cmd "bd"
-              -- local bufs = vim.fn.getbufinfo { buflisted = 1 }
-              -- if not bufs[2] then require("snacks").dashboard() end
-            end,
-            desc = "Close all buffers",
-          },
+          -- ["<C-k><C-w>"] = {
+          --   function()
+          --     require("astrocore.buffer").close_all()
+          --     -- vim.cmd "bd"
+          --     -- local bufs = vim.fn.getbufinfo { buflisted = 1 }
+          --     -- if not bufs[2] then require("snacks").dashboard() end
+          --   end,
+          --   desc = "Close all buffers",
+          -- },
           --
           ["<M-b>"] = {
             function() require("snacks").explorer() end,
