@@ -9,10 +9,23 @@ return {
     harpoon:extend(extensions.builtins.highlight_current_file())
 
     -- REQUIRED
-    harpoon:setup()
+    harpoon:setup {}
     -- REQUIRED
 
-    vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
+    harpoon:extend {
+      ADD = function(ctx)
+        local file_name = ctx.item.value
+        vim.notify("Add: " .. file_name, vim.log.levels.INFO, { title = "Harpoon" })
+      end,
+
+      REMOVE = function(ctx)
+        local file_name = ctx.item.value
+        vim.notify("Del: " .. file_name, vim.log.levels.WARN, { title = "Harpoon" })
+      end,
+    }
+
+    vim.keymap.set("n", "<leader>A", function() harpoon:list():add() end)
+    vim.keymap.set("n", "<leader>R", function() harpoon:list():remove() end)
     vim.keymap.set("n", "<M-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
     for i = 1, 9, 1 do
@@ -24,7 +37,8 @@ return {
     -- vim.keymap.set("n", "<M-n>", function() harpoon:list():next() end)
   end,
   keys = {
-    { "<M-e>" },
+    { "<M-E>" },
+    { "<M-A>" },
     { "<M-1>" },
     { "<M-2>" },
     { "<M-3>" },

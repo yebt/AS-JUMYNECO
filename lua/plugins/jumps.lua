@@ -1,6 +1,7 @@
 return {
   {
     "cosmicbuffalo/eyeliner.nvim",
+    event = { "VeryLazy" },
     keys = {
       { "f" },
       { "F" },
