@@ -21,6 +21,7 @@ return {
   -- { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   -- { import = "astrocommunity.project.project-nvim" },
   -- { import = "astrocommunity.project.neoconf-nvim" }, -- already included in astro
+  { import = "astrocommunity.code-runner.overseer-nvim" },
 
   --- Utils
   { import = "astrocommunity.editing-support.amp-nvim" },
