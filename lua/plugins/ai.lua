@@ -1,19 +1,57 @@
 return {
 
   {
-    "github/copilot.vim",
-    -- opts = {},
-    -- config = false,
-    -- cmd = {
-    --   "Copilot",
-    -- },
-    event = { "VeryLazy" },
-    init = function() vim.g.copilot_no_tab_map = true end,
-    keys = {
-      { "<M-j>", 'copilot#Accept("\\<CR>")', expr = true, silent = true, mode = "i" },
+    "zbirenbaum/copilot.lua",
+    requires = {
+      "copilotlsp-nvim/copilot-lsp", -- (optional) for NES functionality
     },
-    lazy = false,
+    opts = {
+      suggestion = {
+        enabled = true,
+        auto_trigger = true,
+        hide_during_completion = true,
+        debounce = 15,
+        trigger_on_accept = true,
+        keymap = {
+          accept = "<M-l>",
+          accept_word = false,
+          accept_line = false,
+          next = "<M-]>",
+          prev = "<M-[>",
+          dismiss = "<C-]>",
+          toggle_auto_trigger = false,
+        },
+      },
+    },
+    cmd = "Copilot",
+    event = "InsertEnter",
+    -- config = function() require("copilot").setup {} end,
+    -- keys = {
+    --
+    -- }
   },
+
+  -- {
+  --   "github/copilot.vim",
+  --   -- opts = {},
+  --   -- config = false,
+  --   -- cmd = {
+  --   --   "Copilot",
+  --   -- },
+  --   event = { "VeryLazy" },
+  --   init = function() vim.g.copilot_no_tab_map = true end,
+  --   keys = {
+  --     {
+  --       "<M-j>",
+  --       "copilot#Accept('')",
+  --       expr = true,
+  --       silent = true,
+  --       mode = "i",
+  --       script = true,
+  --     },
+  --   },
+  --   lazy = false,
+  -- },
 
   -- Amp integration
   {
