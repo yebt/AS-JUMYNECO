@@ -24,21 +24,25 @@ return {
       end,
     }
 
-    vim.keymap.set("n", "<leader>A", function() harpoon:list():add() end)
-    vim.keymap.set("n", "<leader>R", function() harpoon:list():remove() end)
-    vim.keymap.set("n", "<M-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+    vim.keymap.set("n", "<leader>A", function() harpoon:list():add() end, { desc = "Harpoon add current buffer" })
+    vim.keymap.set("n", "<leader>R", function() harpoon:list():remove() end, { desc = "Harpoon remove current buffer" })
+    vim.keymap.set(
+      "n",
+      "<M-h>",
+      function() harpoon.ui:toggle_quick_menu(harpoon:list()) end,
+      { desc = "Harpoon toggle quick menu" }
+    )
 
     for i = 1, 9, 1 do
-      vim.keymap.set("n", "<M-" .. i .. ">", function() harpoon:list():select(i) end)
+      vim.keymap.set("n", "<M-" .. i .. ">", function() harpoon:list():select(i) end, {
+        desc = "Harpoon go to buffer " .. i,
+      })
     end
-    --
-    -- Toggle previous & next buffers stored within Harpoon list
-    -- vim.keymap.set("n", "<M-p>", function() harpoon:list():prev() end)
-    -- vim.keymap.set("n", "<M-n>", function() harpoon:list():next() end)
   end,
   keys = {
-    { "<M-E>", desc = "Harpoon toggle" },
-    { "<eader>A", desc = "Harpoon add buff" },
+    { "<M-h>", desc = "Harpoon toggle ui" },
+    { "<leader>A", desc = "Harpoon add buff" },
+    { "<leader>R", desc = "Harpoon remove buff" },
     { "<M-1>", desc = "Harpoon g->1" },
     { "<M-2>", desc = "Harpoon g->2" },
     { "<M-3>", desc = "Harpoon g->3" },
