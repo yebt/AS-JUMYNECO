@@ -119,6 +119,12 @@ return {
             return client.supports_method "textDocument/semanticTokens/full" and vim.lsp.semantic_tokens ~= nil
           end,
         },
+        ["<M-f>"] = {
+          function()
+            ---
+            require("internal.lspformatter").select_formatter()
+          end,
+        },
       },
     },
     -- A custom `on_attach` function to be run after the default `on_attach` function
