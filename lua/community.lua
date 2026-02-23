@@ -15,7 +15,7 @@ return {
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
   -- { import = "astrocommunity.comment.ts-comments-nvim" },
-  { import = "astrocommunity.comment.mini-comment" },
+  -- { import = "astrocommunity.comment.mini-comment" },
 
   -- IDE
   { import = "astrocommunity.file-explorer.mini-files" },

@@ -1,4 +1,5 @@
 return {
+
   {
     "folke/ts-comments.nvim",
     opts = {
@@ -62,7 +63,61 @@ return {
         xaml = "<!-- %s -->",
       },
     },
-    event = "VeryLazy",
+    -- event = "VeryLazy",
+    event = "User AstroFile",
     enabled = vim.fn.has "nvim-0.10.0" == 1,
+  },
+
+  {
+    "numToStr/Comment.nvim",
+    event = "User AstroFile",
+    dependencies = { "JoosepAlviste/nvim-ts-context-commentstring", opts = { enable_autocmd = false } },
+    opts = {
+      padding = true,
+      ---Whether the cursor should stay at its position
+      sticky = true,
+
+      ---Lines to be ignored while (un)comment
+      ignore = nil,
+      -- ignores empty lines
+      -- ignore = '^$',
+
+      toggler = {
+        ---Line-comment toggle keymap
+        line = "gcc",
+        ---Block-comment toggle keymap
+        block = "gbc",
+      },
+
+      opleader = {
+        ---Line-comment keymap
+        line = "gc",
+        ---Block-comment keymap
+        block = "gb",
+      },
+
+      extra = {
+        ---Add comment on the line above
+        above = "gcO",
+        ---Add comment on the line below
+        below = "gco",
+        ---Add comment at the end of line
+        eol = "gcA",
+      },
+
+      mappings = {
+        ---Operator-pending mapping; `gcc` `gbc` `gc[count]{motion}` `gb[count]{motion}`
+        basic = true,
+        ---Extra mapping; `gco`, `gcO`, `gcA`
+        extra = true,
+      },
+      ---Function to call before (un)comment
+      pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+      ---Function to call after (un)comment
+      post_hook = nil,
+    },
+    specs = {
+      { "folke/ts-comments.nvim", optional = true, enabled = false },
+    },
   },
 }
