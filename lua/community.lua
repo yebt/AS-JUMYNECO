@@ -17,6 +17,8 @@ return {
   -- { import = "astrocommunity.comment.ts-comments-nvim" },
   -- { import = "astrocommunity.comment.mini-comment" },
 
+  { import = "astrocommunity.search.nvim-spectre" },
+
   -- IDE
   { import = "astrocommunity.file-explorer.mini-files" },
   -- { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
