@@ -70,6 +70,7 @@ return {
 
   {
     "numToStr/Comment.nvim",
+    enabled = true,
     event = "User AstroFile",
     dependencies = { "JoosepAlviste/nvim-ts-context-commentstring", opts = { enable_autocmd = false } },
     opts = {
