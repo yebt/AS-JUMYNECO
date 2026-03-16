@@ -52,6 +52,7 @@ return {
   --- Langs
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.yaml" }, --- allow jsonchema in yml
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.angular" },
