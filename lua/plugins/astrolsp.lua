@@ -38,6 +38,7 @@ return {
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
+      async = true,
     },
     -- enable servers that you already have installed without mason
     servers = {
