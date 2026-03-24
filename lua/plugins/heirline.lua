@@ -24,5 +24,11 @@ return {
       status.component.file_info(),
     }
     -- opts.statusline = {}
+    opts.statuscolumn = { -- statuscolumn
+      -- init = function(self) self.bufnr = vim.api.nvim_get_current_buf() end,
+      status.component.foldcolumn(),
+      status.component.numbercolumn(),
+      status.component.signcolumn(),
+    }
   end,
 }
