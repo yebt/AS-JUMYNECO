@@ -18,7 +18,7 @@ return {
     },
   },
   opts = {
-    preset = "lazy",
+    preset = "obsidian",
     completions = { lsp = { enabled = true } },
   },
 }
