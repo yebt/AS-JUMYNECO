@@ -44,13 +44,14 @@ return {
             desc = "Pick file"
           },
 
-        },
           ["<C-o>"] = {
             function()
               require("snacks").picker.lsp_symbols()
             end,
             desc = "Pick lsp symbol"
-          }
+          },
+
+        },
         t = {
           -- setting a mapping to false will disable it
           -- ["<esc>"] = false,
