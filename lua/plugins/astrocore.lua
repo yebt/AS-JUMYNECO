@@ -15,10 +15,7 @@ return {
       large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
       autopairs = true, -- enable autopairs at start
       cmp = true, -- enable completion at start
-      diagnostics = {
-        virtual_text = true,
-        virtual_lines = false,
-      }, -- diagnostic settings on startup
+      diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
       highlighturl = true, -- highlight URLs at start
       notifications = true, -- enable notifications at start
     },
@@ -38,7 +35,7 @@ return {
       },
       pattern = {
         [".*/etc/foo/.*"] = "fooscript",
-        -- [".*%.component%.html"] = "htmlangular",
+        [".*%.component%.html"] = "htmlangular",
       },
     },
     -- vim options can be configured here
@@ -48,19 +45,13 @@ return {
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
-        wrap = true, -- sets vim.opt.wrap
-        clipboard = "unnamed",
-        spelllang = "en,es",
-        -- spelloptions = "camel",
-        -- spellfile = {
-        --   vim.fs.joinpath(vim.fn.stdpath "config", "spell/en.utf-8.add"),
-        --   vim.fs.joinpath(vim.fn.stdpath "config", "spell/es.utf-8.add"),
-        -- },
-        exrc = true,
+        wrap = false, -- sets vim.opt.wrap
+
+        --
         showtabline = 0,
+
       },
       g = { -- vim.g.<key>
-        -- ["spellfile_URL"] = "https://ftp.nluug.nl/vim/runtime/spell/",
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
@@ -96,42 +87,6 @@ return {
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
       },
-    },
-
-    autocmds = {
-      -- autocommands are organized into augroups for easy management
-      -- autohidetabline = {
-      --   -- each augroup contains a list of auto commands
-      --   {
-      --     -- create a new autocmd on the "User" event
-      --     event = "User",
-      --     -- the pattern is the name of our User autocommand events
-      --     pattern = "AstroBufsUpdated", -- triggered when vim.t.bufs is updated
-      --     -- nice description
-      --     desc = "Hide tabline when only one buffer and one tab",
-      --     -- add the autocmd to the newly created augroup
-      --     group = "autohidetabline",
-      --     callback = function()
-      --       -- if there is more than one buffer in the tab, show the tabline
-      --       -- if there are 0 or 1 buffers in the tab, only show the tabline if there is more than one vim tab
-      --       local new_showtabline = #vim.t.bufs > 1 and 2 or 1
-      --       -- check if the new value is the same as the current value
-      --       if new_showtabline ~= vim.opt.showtabline:get() then
-      --         -- if it is different, then set the new `showtabline` value
-      --         vim.opt.showtabline = new_showtabline
-      --       end
-      --     end,
-      --   },
-      --   --
-      --   -- {
-      --   --   event = "FileType",
-      --   --   pattern = "htmlangular",
-      --   --   callback = function()
-      --   --     require("luasnip").filetype_extend("typescript", { "angular" })
-      --   --     require("luasnip").filetype_extend("html", { "angular" })
-      --   --   end,
-      --   -- },
-      -- },
     },
   },
 }
