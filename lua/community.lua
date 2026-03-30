@@ -10,44 +10,8 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
 
-  -- Behaviour
-  { import = "astrocommunity.editing-support.treesj" },
-  { import = "astrocommunity.motion.flash-nvim" },
+
   { import = "astrocommunity.workflow.hardtime-nvim" },
-  -- { import = "astrocommunity.comment.ts-comments-nvim" },
-  -- { import = "astrocommunity.comment.mini-comment" },
-
-  { import = "astrocommunity.search.nvim-spectre" },
-
-  -- IDE
-  { import = "astrocommunity.file-explorer.mini-files" },
-  -- { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
-  -- { import = "astrocommunity.project.project-nvim" },
-  -- { import = "astrocommunity.project.neoconf-nvim" }, -- already included in astro
-  { import = "astrocommunity.code-runner.overseer-nvim" },
-
-  --- Utils
-  { import = "astrocommunity.editing-support.amp-nvim" },
-  { import = "astrocommunity.diagnostics.trouble-nvim" },
-  -- { import = "astrocommunity.syntax.vim-easy-align" },
-
-  --- LSP
-  -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
-  { import = "astrocommunity.test.neotest" },
-
-  --- Colors
-  { import = "astrocommunity.colorscheme.catppuccin" },
-  -- { import = "astrocommunity.colorscheme.github-nvim-theme" },
-
-  --- UI
-  -- { import = "astrocommunity.recipes.picker-nvchad-theme" },
-  -- { import = "astrocommunity.recipes.telescope-nvim-snacks" },
-  -- { import = "astrocommunity.recipes.disable-borders" },
-  -- { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
-  -- { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
-  -- { import = "astrocommunity.recipes.heirline-clock-statusline" },
-  -- { import = "astrocommunity.recipes.heirline-tabline-buffer-number" },
-  -- { import = "astrocommunity.recipes.heirline-vscode-winbar" },
 
   --- Langs
   { import = "astrocommunity.pack.markdown" },
@@ -56,10 +20,4 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.angular" },
-  -- { import = "astrocommunity.pack.php" },
-  -- { import = "astrocommunity.pack.bash" },
-  -- { import = "astrocommunity.pack.astro" },
-
-  --
-  -- { import = "astrocommunity.bars-and-lines.wakastat" },
 }
