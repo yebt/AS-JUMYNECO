@@ -11,7 +11,14 @@ return {
   -- import/override with your plugins folder
 
 
+  --- Behaviours
   { import = "astrocommunity.workflow.hardtime-nvim" },
+
+  --- Renders
+  -- { import = "astrocommunity.markdown-and-latex.markview-nvim" },
+  -- { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
+
+  --- Renders
 
   --- Langs
   { import = "astrocommunity.pack.markdown" },
@@ -20,4 +27,6 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.angular" },
+
+  { import = "astrocommunity.pack.markdown" },
 }

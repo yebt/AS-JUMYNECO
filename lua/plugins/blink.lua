@@ -1,4 +1,3 @@
-
 return { -- override blink.cmp plugin
   "saghen/blink.cmp",
   opts = {
@@ -38,5 +37,16 @@ return { -- override blink.cmp plugin
       },
     },
 
+    cmdline = {
+      enabled = false,
+    },
+
+    signature = {
+      enabled = true,
+
+      trigger = {
+        enabled = false,
+      },
+    },
   },
 }
