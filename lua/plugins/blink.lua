@@ -4,9 +4,7 @@ return { -- override blink.cmp plugin
   version = false,
   build = "cargo build --release",
   opts = {
-    fuzzy = {
-      implementarion = 'rust'
-    },
+    fuzzy = { implementation = "prefer_rust_with_warning" },
     keymap = {
       ["<Tab>"] = { "snippet_forward", "fallback" },
       -- [""] = { function(cmp) cmp.show { providers = { "ripgrep" } } end },
