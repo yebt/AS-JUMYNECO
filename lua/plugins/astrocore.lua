@@ -1,5 +1,4 @@
 -- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -88,5 +87,87 @@ return {
         -- ["<C-S>"] = false,
       },
     },
+
+    -- autocmds = {
+    --   changecolorsinautocomplete = {
+    --     {
+    --       event = "InsertEnter",
+    --       group = "internalwalo",
+    --       callback = function()
+    --         --
+    --         local colors = {
+    --           PmenuSel = { bg = "#282C34", fg = "NONE" },
+    --           Pmenu = { fg = "#C5CDD9", bg = "#22252A" },
+    --
+    --           CmpItemAbbrDeprecated = { fg = "#7E8294", bg = "NONE", strikethrough = true },
+    --           CmpItemAbbrMatch = { fg = "#82AAFF", bg = "NONE", bold = true },
+    --           CmpItemAbbrMatchFuzzy = { fg = "#82AAFF", bg = "NONE", bold = true },
+    --           CmpItemMenu = { fg = "#C792EA", bg = "NONE", italic = true },
+    --
+    --           CmpItemKindField = { fg = "#EED8DA", bg = "#B5585F" },
+    --           CmpItemKindProperty = { fg = "#EED8DA", bg = "#B5585F" },
+    --           CmpItemKindEvent = { fg = "#EED8DA", bg = "#B5585F" },
+    --
+    --           CmpItemKindText = { fg = "#C3E88D", bg = "#9FBD73" },
+    --           CmpItemKindEnum = { fg = "#C3E88D", bg = "#9FBD73" },
+    --           CmpItemKindKeyword = { fg = "#C3E88D", bg = "#9FBD73" },
+    --
+    --           CmpItemKindConstant = { fg = "#FFE082", bg = "#D4BB6C" },
+    --           CmpItemKindConstructor = { fg = "#FFE082", bg = "#D4BB6C" },
+    --           CmpItemKindReference = { fg = "#FFE082", bg = "#D4BB6C" },
+    --
+    --           CmpItemKindFunction = { fg = "#EADFF0", bg = "#A377BF" },
+    --           CmpItemKindStruct = { fg = "#EADFF0", bg = "#A377BF" },
+    --           CmpItemKindClass = { fg = "#EADFF0", bg = "#A377BF" },
+    --           CmpItemKindModule = { fg = "#EADFF0", bg = "#A377BF" },
+    --           CmpItemKindOperator = { fg = "#EADFF0", bg = "#A377BF" },
+    --
+    --           CmpItemKindVariable = { fg = "#C5CDD9", bg = "#7E8294" },
+    --           CmpItemKindFile = { fg = "#C5CDD9", bg = "#7E8294" },
+    --
+    --           CmpItemKindUnit = { fg = "#F5EBD9", bg = "#D4A959" },
+    --           CmpItemKindSnippet = { fg = "#F5EBD9", bg = "#D4A959" },
+    --           CmpItemKindFolder = { fg = "#F5EBD9", bg = "#D4A959" },
+    --
+    --           CmpItemKindMethod = { fg = "#DDE5F5", bg = "#6C8ED4" },
+    --           CmpItemKindValue = { fg = "#DDE5F5", bg = "#6C8ED4" },
+    --           CmpItemKindEnumMember = { fg = "#DDE5F5", bg = "#6C8ED4" },
+    --
+    --           CmpItemKindInterface = { fg = "#D8EEEB", bg = "#58B5A8" },
+    --           CmpItemKindColor = { fg = "#D8EEEB", bg = "#58B5A8" },
+    --           CmpItemKindTypeParameter = { fg = "#D8EEEB", bg = "#58B5A8" },
+    --         }
+    --
+    --         for color_name, color_settings in pairs(colors) do
+    --           vim.api.nvim_set_hl(0, color_name, color_settings) 
+    --         end
+    --       end,
+    --     },
+    --   },
+    --   -- autocommands are organized into augroups for easy management
+    --   autohidetabline = {
+    --     -- each augroup contains a list of auto commands
+    --     {
+    --       -- create a new autocmd on the "User" event
+    --       event = "User",
+    --       -- the pattern is the name of our User autocommand events
+    --       pattern = "AstroBufsUpdated", -- triggered when vim.t.bufs is updated
+    --       -- nice description
+    --       desc = "Hide tabline when only one buffer and one tab",
+    --       -- add the autocmd to the newly created augroup
+    --       group = "autohidetabline",
+    --       callback = function()
+    --         -- if there is more than one buffer in the tab, show the tabline
+    --         -- if there are 0 or 1 buffers in the tab, only show the tabline if there is more than one vim tab
+    --         local new_showtabline = #vim.t.bufs > 1 and 2 or 1
+    --         -- check if the new value is the same as the current value
+    --         if new_showtabline ~= vim.opt.showtabline:get() then
+    --           -- if it is different, then set the new `showtabline` value
+    --           vim.opt.showtabline = new_showtabline
+    --         end
+    --       end,
+    --     },
+    --   },
+    -- },
   },
 }

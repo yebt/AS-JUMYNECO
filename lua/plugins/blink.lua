@@ -37,9 +37,21 @@ return { -- override blink.cmp plugin
               text = function(ctx) return " #" .. ctx.source_name:sub(1, 3) end,
               highlight = "Comment",
             },
+
+            -- kind_icon = {
+            --   -- (optional) use highlights from mini.icons
+            --   highlight = function(ctx)
+            --     -- local _, hl =
+            --     return "CmpItemKind" .. ctx.kind
+            --   end,
+            -- },
           },
         },
       },
+    },
+
+    appearance = {
+      nerd_font_variant = "normal",
     },
 
     cmdline = {
