@@ -1,6 +1,12 @@
 return { -- override blink.cmp plugin
   "saghen/blink.cmp",
+  -- NOTE: force build
+  version = false,
+  build = "cargo build --release",
   opts = {
+    fuzzy = {
+      implementarion = 'rust'
+    },
     keymap = {
       ["<Tab>"] = { "snippet_forward", "fallback" },
       -- [""] = { function(cmp) cmp.show { providers = { "ripgrep" } } end },
@@ -14,6 +20,7 @@ return { -- override blink.cmp plugin
         end,
       },
     },
+
     completion = {
       menu = {
         border = "none",
