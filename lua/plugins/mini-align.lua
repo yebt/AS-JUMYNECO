@@ -8,8 +8,8 @@ return {
     },
   },
   config = true,
-  -- keys = {
-  --   {"ga", mode = {"x","n"}, desc = "Align text"},
-  --   {"gA", mode = {"x","n"}, desc = "Align text"},
-  -- }
+  keys = {
+    {"ga", mode = {"x","n"}, desc = "Align text"},
+    {"gA", mode = {"x","n"}, desc = "Align text"},
+  }
 }
