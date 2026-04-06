@@ -9,6 +9,7 @@ return {
       "eslint-lsp",
       "prettier",
       "intelephense",
+      "vue-language-server",
     },
   },
 }
