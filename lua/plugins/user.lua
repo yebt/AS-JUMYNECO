@@ -7,6 +7,17 @@
 ---@type LazySpec
 return {
 
+  {
+    "m4xshen/hardtime.nvim",
+    event = "VeryLazy",
+    lazy = true,
+  },
+  {
+    "AstroNvim/astrocommunity",
+    event = "VeryLazy",
+    lazy = true,
+  },
+
   -- == Examples of Adding Plugins ==
 
   -- "andweeb/presence.nvim",
