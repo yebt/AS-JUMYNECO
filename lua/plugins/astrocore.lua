@@ -48,7 +48,7 @@ return {
 
         --
         showtabline = 0,
-        clipboard = "unnamed",
+        clipboard = "unnamedplus",
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)

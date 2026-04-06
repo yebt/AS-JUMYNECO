@@ -17,6 +17,15 @@ return {
     event = "VeryLazy",
     lazy = true,
   },
+  {
+    "folke/which-key.nvim",
+    opts = {
+      preset = "helix",
+      win = {
+        no_overlap = false,
+      }
+    }
+  },
 
   -- == Examples of Adding Plugins ==
 

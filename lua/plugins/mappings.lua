@@ -62,6 +62,9 @@ return {
           -- setting a mapping to false will disable it
           -- ["<esc>"] = false,
         },
+        v = {
+          ["<Leader>y"] = { '"+y', desc = "Copy to clipboard" },
+        }
       },
     },
   },
