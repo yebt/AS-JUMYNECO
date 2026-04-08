@@ -23,5 +23,9 @@
       "<!-- markdownlint-disable MD013-->"
     ],
     "description": "Disable markdown lint rule of max line lenght"
+  },
+  "todo": {
+    "prefix": "todo",
+    "body": "- [ ] $0"
   }
 }
