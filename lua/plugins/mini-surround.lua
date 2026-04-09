@@ -1,7 +1,8 @@
+---@type LazySpec
 return {
-
   "echasnovski/mini.surround",
   keys = {
-    "gz"
-  }
+    "gz",
+    { "", [[:<C-u>lua MiniSurround.add('visual')<CR>]], mode = { "x" }, desc = "Add surround" },
+  },
 }
