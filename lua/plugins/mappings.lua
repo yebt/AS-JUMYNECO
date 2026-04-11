@@ -53,7 +53,7 @@ return {
             end,
           },
 
-          ["<C-o>"] = {
+          ["<M-o>"] = {
             function() require("snacks").picker.lsp_symbols() end,
             desc = "Pick lsp symbol",
           },
