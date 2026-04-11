@@ -21,6 +21,7 @@ return {
   -- { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 
   --- Renders
+  { import = "astrocommunity.colorscheme.catppuccin" },
 
   --- Langs
   { import = "astrocommunity.pack.markdown" },
