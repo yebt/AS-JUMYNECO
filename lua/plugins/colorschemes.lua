@@ -8,10 +8,11 @@ return {
       -- colorscheme = "astrodark",
       -- colorscheme = "catppuccin-mocha",
       -- colorscheme = "koda",
-      -- colorscheme = "token",
       -- colorscheme = "thorn",
       -- colorscheme = "gruvbox",
-      colorscheme = "neodarcula",
+      -- colorscheme = "tokyonight",
+      -- colorscheme = "oxocarbon",
+      colorscheme = "oasis",
     },
   },
 
@@ -23,10 +24,10 @@ return {
   },
 
   ---
-  {
-    "ThorstenRhau/token",
-    lazy = true,
-  },
+  -- {
+  --   "ThorstenRhau/token",
+  --   lazy = true,
+  -- },
 
   ---
   {
@@ -48,7 +49,24 @@ return {
   },
 
   {
-    "pmouraguedes/neodarcula.nvim",
+    "folke/tokyonight.nvim",
     lazy = true,
+    opts = {
+      style = "night",
+      dim_inactive = true,
+    },
+  },
+
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    lazy = true,
+  },
+
+  {
+    "uhs-robert/oasis.nvim",
+    lazy = true,
+    opts = {
+      style = "starlight", -- lagoon, starlight
+    },
   },
 }
