@@ -15,6 +15,7 @@ return {
   { import = "astrocommunity.workflow.hardtime-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.motion.flash-nvim" },
+  { import = "astrocommunity.code-runner.overseer-nvim" },
 
   --- Renders
   -- { import = "astrocommunity.markdown-and-latex.markview-nvim" },
