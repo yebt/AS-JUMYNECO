@@ -22,6 +22,9 @@ return {
     diagnostics = {
       virtual_text = true,
       underline = true,
+      float = {
+        source = true
+      }
     },
     -- passed to `vim.filetype.add`
     filetypes = {
@@ -50,6 +53,7 @@ return {
         --
         showtabline = 0,
         clipboard = "unnamed",
+        exrc=true,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
