@@ -6,6 +6,26 @@
   "contributes": {
     "snippets": [
       {
+        "language": "typescript",
+        "path": "./vitest/it.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vitest/expect.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vitest/assertion.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vitest/describe.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./vitest/test.json"
+      },
+      {
         "language": [
           "vue"
         ],
