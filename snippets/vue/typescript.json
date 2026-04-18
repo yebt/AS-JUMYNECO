@@ -10,5 +10,17 @@
       "}"
     ],
     "description": "Generic Vue composable"
+  },
+  "Vue Composable arrow function": {
+    "prefix": "vacomposable",
+    "body": [
+      "export const use${1:Feature} = (${2:options} = {}) => {",
+      "\t${3}",
+      "\treturn {",
+      "\t\t${0}",
+      "\t};",
+      "}"
+    ],
+    "description": "Generic Vue composable using arrow function"
   }
 }
