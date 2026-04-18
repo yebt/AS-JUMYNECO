@@ -26,6 +26,10 @@
         "path": "./vitest/test.json"
       },
       {
+        "language": "typescript",
+        "path": "./vue/typescript.json"
+      },
+      {
         "language": [
           "vue"
         ],
