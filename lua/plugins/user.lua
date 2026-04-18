@@ -49,6 +49,11 @@ return {
           }, "\n"),
         },
       },
+      indent = {
+        chunk = {
+          enabled = true,
+        },
+      },
     },
   },
 
