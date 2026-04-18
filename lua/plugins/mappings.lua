@@ -57,6 +57,10 @@ return {
             function() require("snacks").picker.lsp_symbols() end,
             desc = "Pick lsp symbol",
           },
+          ["<M-b>"] = {
+            function() require("snacks").picker.explorer() end,
+            desc = "Pick grep",
+          },
         },
         t = {
           -- setting a mapping to false will disable it
