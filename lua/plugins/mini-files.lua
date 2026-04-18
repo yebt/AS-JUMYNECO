@@ -31,7 +31,7 @@ local toggle_dotfiles = function()
 end
 
 local files_set_cwd = function()
-  local cur_entry_path = MiniFiles.get_fs_entry().path
+  local cur_entry_path = require("mini.files").get_fs_entry().path
   local cur_directory = vim.fs.dirname(cur_entry_path)
   if cur_directory ~= nil then vim.fn.chdir(cur_directory) end
 end
@@ -47,6 +47,16 @@ return {
             ["<Leader>e"] = {
               function()
                 if not require("mini.files").close() then require("mini.files").open() end
+              end,
+              desc = "Explorer",
+            },
+            ["<Leader>E"] = {
+              function()
+                if not require("mini.files").close() then
+                  local mf = require("mini.files")
+                  mf.open(vim.api.nvim_buf_get_name(0))
+                  mf.reveal_cwd()
+                end
               end,
               desc = "Explorer",
             },
