@@ -10,12 +10,13 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
 
-
   --- Behaviours
   { import = "astrocommunity.workflow.hardtime-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
+  -- WARN: moved to mini-files.lua
+  -- { import = "astrocommunity.file-explorer.mini-files" },
 
   --- Renders
   -- { import = "astrocommunity.markdown-and-latex.markview-nvim" },
