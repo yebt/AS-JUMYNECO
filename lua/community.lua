@@ -18,6 +18,9 @@ return {
   -- WARN: moved to mini-files.lua
   -- { import = "astrocommunity.file-explorer.mini-files" },
 
+  --- Tools
+  { import = "astrocommunity.programming-language-support.kulala-nvim" },
+
   --- Renders
   -- { import = "astrocommunity.markdown-and-latex.markview-nvim" },
   -- { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
