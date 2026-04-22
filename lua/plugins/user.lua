@@ -27,6 +27,13 @@ return {
     },
   },
 
+  {
+    "stevearc/overseer.nvim",
+    keys ={
+      { "<F2>", "<cmd>OverseerRun<cr>", desc = "Run Task" },
+    }
+  },
+
   -- == Examples of Adding Plugins ==
 
   -- "andweeb/presence.nvim",
