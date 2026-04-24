@@ -36,6 +36,13 @@ local files_set_cwd = function()
   if cur_directory ~= nil then vim.fn.chdir(cur_directory) end
 end
 
+local yank_path = function()
+  local path = (require("mini.files").get_fs_entry() or {}).path
+  if path == nil then return vim.notify "Cursor is not on valid entry" end
+  local relative = vim.fs.relpath(vim.loop.cwd(), path)
+  vim.fn.setreg(vim.v.register, relative)
+end
+
 return {
   "echasnovski/mini.files",
   dependencies = {
@@ -53,7 +60,7 @@ return {
             ["<Leader>E"] = {
               function()
                 if not require("mini.files").close() then
-                  local mf = require("mini.files")
+                  local mf = require "mini.files"
                   mf.open(vim.api.nvim_buf_get_name(0))
                   mf.reveal_cwd()
                 end
@@ -99,7 +106,8 @@ return {
                     map_split(buf_id, "<C-w>T", "tab", false)
 
                     vim.keymap.set("n", "g.", toggle_dotfiles, { buffer = buf_id, desc = "Toggle hidden files" })
-                    vim.keymap.set("n", "gc", files_set_cwd, { buffer = args.data.buf_id, desc = "Set cwd" })
+                    vim.keymap.set("n", "gc", files_set_cwd, { buffer = buf_id, desc = "Set cwd" })
+                    vim.keymap.set("n", "gy", yank_path, { buffer = buf_id, desc = "Yank path" })
                   end,
                 },
                 {
