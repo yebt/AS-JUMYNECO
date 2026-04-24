@@ -97,7 +97,7 @@ return {
       _call_spells = {
         {
           event = "FileType",
-          pattern = { "text" },
+          pattern = { "text" , "markdown" },
           callback = function()
             vim.opt_local.spell = true
             --
