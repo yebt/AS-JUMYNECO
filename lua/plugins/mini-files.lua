@@ -108,6 +108,18 @@ return {
                     vim.keymap.set("n", "g.", toggle_dotfiles, { buffer = buf_id, desc = "Toggle hidden files" })
                     vim.keymap.set("n", "gc", files_set_cwd, { buffer = buf_id, desc = "Set cwd" })
                     vim.keymap.set("n", "gy", yank_path, { buffer = buf_id, desc = "Yank path" })
+                    -- toggle preview 
+                    vim.keymap.set("n", "gp", function()
+                      local ok, mf = pcall(require, "mini.files")
+                      if not ok then return end
+                      mf.config.windows.preview = not mf.config.windows.preview
+                      mf.refresh({
+                        windows = {
+                          preview = mf.config.windows.preview,
+                        },
+                      })
+                    end, { buffer = buf_id, desc = "Toggle preview" })
+
                   end,
                 },
                 {
