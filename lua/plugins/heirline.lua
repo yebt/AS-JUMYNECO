@@ -4,6 +4,11 @@ return {
     local status = require "astroui.status"
 
     opts.winbar = {
+
+      status.component.breadcrumbs {
+        hl = status.hl.get_attributes("winbar", true),
+      },
+
       {
         provider = function()
           local winbar_components = {
@@ -21,5 +26,5 @@ return {
 
       status.component.file_info(),
     }
-  end
+  end,
 }

@@ -7,12 +7,14 @@ return {
     opts = {
       -- colorscheme = "astrodark",
       -- colorscheme = "catppuccin-mocha",
+      -- colorscheme = "catppuccin",
+      colorscheme = "catppuccin-nvim",
       -- colorscheme = "koda",
       -- colorscheme = "thorn",
       -- colorscheme = "gruvbox",
       -- colorscheme = "tokyonight",
       -- colorscheme = "oxocarbon",
-      colorscheme = "oasis",
+      -- colorscheme = "oasis",
     },
   },
 
@@ -67,6 +69,54 @@ return {
     lazy = true,
     opts = {
       style = "starlight", -- lagoon, starlight
+    },
+  },
+
+  ---
+  {
+    "sainnhe/gruvbox-material",
+    lazy = true,
+  },
+
+  ---
+  {
+    "54L1M/Oshen.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = {
+      -- transparent = true, -- set false for opaque background
+    },
+    -- config = function()
+    --   require("oshen").setup {
+    --     -- transparent = true, -- set false for opaque background
+    --   }
+    --   vim.cmd.colorscheme "oshen-night" -- or "oshen-day" for light
+    -- end,
+  },
+
+  {
+    "pmouraguedes/neodarcula.nvim",
+    lazy = true,
+    priority = 1000,
+  },
+
+  -- {
+  --   "https://gitlab.com/bartekjaszczak/distinct-nvim",
+  --   lazy = true,
+  -- },
+
+  {
+    "https://github.com/ThorstenRhau/token",
+    lazy = true,
+  },
+
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    lazy = true,
+    priority = 1000,
+    opts = {
+      flavour = "mocha", -- latte, frappe, macchiato, mocha
     },
   },
 }
