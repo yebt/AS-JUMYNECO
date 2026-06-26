@@ -141,7 +141,7 @@ return {
           overlay1  = "#7f849c",
           overlay0  = "#6c7086",
           surface2  = "#585b70",
-          surface1  = "#45475a",
+          surface1  = "#455159",
           surface0  = "#324145",
           base      = "#00151B",
           mantle    = "#012029",
