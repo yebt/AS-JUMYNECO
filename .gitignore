@@ -1,3 +1,4 @@
 *.bak
 test/*
 lazy-lock.json
+.env

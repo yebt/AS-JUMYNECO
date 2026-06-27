@@ -1,3 +1,18 @@
+-- Load .env file
+local function loadenvfile()
+  local envfile = vim.fn.stdpath "config" .. "/.env"
+  if vim.fn.filereadable(envfile) == 1 then
+    for line in io.lines(envfile) do
+      local key, value = line:match("([^=]+)=([^=]+)")
+      if key and value then
+        vim.env[key] = value
+      end
+    end
+  end
+end
+
+loadenvfile()
+
 -- This file simply bootstraps the installation of Lazy.nvim and then calls other files for execution
 -- This file doesn't necessarily need to be touched, BE CAUTIOUS editing this file and proceed at your own risk.
 local lazypath = vim.env.LAZY or vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
