@@ -20,6 +20,7 @@ return {
 
   --- Tools
   { import = "astrocommunity.programming-language-support.kulala-nvim" },
+  { import = "astrocommunity.ai.avante-nvim" },
 
   --- Renders
   -- { import = "astrocommunity.markdown-and-latex.markview-nvim" },
