@@ -1,9 +1,16 @@
 return { -- override blink.cmp plugin
   "saghen/blink.cmp",
   -- NOTE: force build
-  version = false,
-  build = "cargo build --release",
+  -- version = false,
+  -- build = "cargo build --release",
+  build = function() require("blink.cmp").build():pwait() end,
+  dependencies = {
+    "saghen/blink.lib",
+    "rafamadriz/friendly-snippets",
+  },
+
   opts = {
+    -- fuzzy = { implementation = "prefer_rust_with_warning" },
     fuzzy = { implementation = "prefer_rust_with_warning" },
     keymap = {
       ["<Tab>"] = { "snippet_forward", "fallback" },
@@ -19,18 +26,21 @@ return { -- override blink.cmp plugin
       },
     },
 
+    --
     completion = {
       menu = {
-        border = "none",
+        -- border = "none",
+        border = "solid",
         scrollbar = true,
         draw = {
           align_to = "label",
-          columns = {
-            { "kind_icon" },
-            { "label", "label_description", gap = 1 },
-            { "kind" },
-            { "source_name_3" },
-          },
+          --         columns = {
+          --           { "kind_icon" },
+          --           { "label", "label_description", gap = 1 },
+          --           { "kind" },
+          --           { "source_name_3" },
+          --         },
+
           components = {
             source_name_3 = {
               width = { max = 30 },

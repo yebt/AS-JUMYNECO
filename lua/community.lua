@@ -17,10 +17,13 @@ return {
   { import = "astrocommunity.code-runner.overseer-nvim" },
   -- WARN: moved to mini-files.lua
   -- { import = "astrocommunity.file-explorer.mini-files" },
+  --
+  -- { import = "astrocommunity.completion.blink-cmp" },
 
   --- Tools
-  { import = "astrocommunity.programming-language-support.kulala-nvim" },
-  { import = "astrocommunity.ai.avante-nvim" },
+  -- { import = "astrocommunity.programming-language-support.kulala-nvim" },
+  -- { import = "astrocommunity.ai.avante-nvim" },
+  { import = "astrocommunity.ai.codecompanion-nvim" },
 
   --- Renders
   -- { import = "astrocommunity.markdown-and-latex.markview-nvim" },
