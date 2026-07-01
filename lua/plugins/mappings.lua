@@ -6,7 +6,7 @@ return {
       mappings = {
         -- first key is the mode
         n = {
-          ["<Leader>A"] = { "ggVG", desc = "Select All" },
+          ["<Leader>a"] = { "ggVG", desc = "Select All" },
           ["<Leader>y"] = { '"+y', desc = "Copy to clipboard" },
           ["<Leader>Y"] = { '"+y$', desc = "Copy to clipboard" },
 

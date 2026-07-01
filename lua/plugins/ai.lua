@@ -1,21 +1,24 @@
+---
+
 ---@type LazySpec
 return {
-  {
-    "github/copilot.vim",
-    event = "VeryLazy",
-    cmd = "Copilot",
-    keys = {
-      {
-        "<M-l>",
-        'copilot#Accept("\\<CR>")',
-        mode = "i",
-        silent = true,
-        replace_keycodes = false,
-        expr = true,
-        desc = "Accept Copilot suggestion",
-      },
-    },
-  },
+
+  -- {
+  --   "github/copilot.vim",
+  --   event = "VeryLazy",
+  --   cmd = "Copilot",
+  --   keys = {
+  --     {
+  --       "<M-l>",
+  --       'copilot#Accept("\\<CR>")',
+  --       mode = "i",
+  --       silent = true,
+  --       replace_keycodes = false,
+  --       expr = true,
+  --       desc = "Accept Copilot suggestion",
+  --     },
+  --   },
+  -- },
 
   -- {
   --   "yetone/avante.nvim",
@@ -95,4 +98,73 @@ return {
   --     },
   --   },
   -- },
+
+  -- {
+  --   "yetone/avante.nvim",
+  --   opts = {
+  --     -- provider = "kimi-cli",
+  --     provider = "moonshot",
+  --     providers = {
+  --       moonshot = {
+  --         endpoint = "https://api.kimi.com/coding/v1",
+  --         model = "kimi-k2.7-code",
+  --         timeout = 30000, -- Timeout in milliseconds
+  --         extra_request_body = {
+  --           temperature = 1,
+  --           -- max_tokens = 32768,
+  --         },
+  --         -- api_key = vim.env.
+  --       },
+  --     },
+  --     selector = {
+  --       provider = "snacks",
+  --     },
+  --     input = {
+  --       provider = "snacks",
+  --       provider_opts = {
+  --         -- Additional snacks.input options
+  --         title = "Avante Input",
+  --         icon = " ",
+  --       },
+  --     },
+  --     -- acp_providers = {
+  --     --
+  --     -- },
+  --   },
+  --
+  -- }
+
+  -- {
+  --   "olimorris/codecompanion.nvim",
+  --   ---@module 'codecompanion'
+  --   opts = {
+  --     adapters = {
+  --       http = {
+  --         kimicode = function()
+  --           return require("codecompanion.adapters").extend("azure_openai", {
+  --             env = {
+  --               api_key = vim.env.MOONSHOT_API_KEY,
+  --               endpoint = "https://api.kimi.com/coding/v1",
+  --             },
+  --             schema = {
+  --               model = {
+  --                 default = "kimi-k2.7-code",
+  --               },
+  --             },
+  --           })
+  --         end,
+  --       },
+  --     },
+  --
+  --     interactions = {
+  --       chat = {
+  --         adapter = "kimicode",
+  --       },
+  --       inline = {
+  --         adapter = "kimicode",
+  --       },
+  --     },
+  --   },
+  -- },
+
 }
