@@ -18,7 +18,7 @@ return {
   -- WARN: moved to mini-files.lua
   -- { import = "astrocommunity.file-explorer.mini-files" },
   --
-  -- { import = "astrocommunity.completion.blink-cmp" },
+  { import = "astrocommunity.completion.blink-cmp" },
 
   --- Tools
   -- { import = "astrocommunity.programming-language-support.kulala-nvim" },

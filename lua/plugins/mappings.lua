@@ -20,7 +20,8 @@ return {
             end,
             desc = "Pick to close",
           },
-          ["<M-s>"] = { function() require("astrocore.buffer").prev() end, desc = "Previous buffer" },
+          -- ["<M-s>"] = { function() require("astrocore.buffer").prev() end, desc = "Previous buffer" },
+          ["<M-s>"] = {  ":blast<cr>", silent = true,desc = "Previous buffer" },
           ["<C-p>"] = {
             function()
               require("snacks").picker.files {
