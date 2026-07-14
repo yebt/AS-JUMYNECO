@@ -1,16 +1,18 @@
 return { -- override blink.cmp plugin
   "saghen/blink.cmp",
-  -- NOTE: force build
-  -- version = false,
-  -- build = "cargo build --release",
-  build = function() require("blink.cmp").build():pwait() end,
+  -- -- NOTE: force build
+  -- -- version = false,
+  -- -- build = "cargo build --release",
+  -- build = function() require("blink.cmp").build():pwait() end,
+  --
+  version = '1.*',
+
   dependencies = {
     "saghen/blink.lib",
     "rafamadriz/friendly-snippets",
   },
-
+  --
   opts = {
-    -- fuzzy = { implementation = "prefer_rust_with_warning" },
     fuzzy = { implementation = "prefer_rust_with_warning" },
     keymap = {
       ["<Tab>"] = { "snippet_forward", "fallback" },
