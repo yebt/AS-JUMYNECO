@@ -18,7 +18,7 @@ return {
   -- WARN: moved to mini-files.lua
   -- { import = "astrocommunity.file-explorer.mini-files" },
   --
-  { import = "astrocommunity.completion.blink-cmp" },
+  -- { import = "astrocommunity.completion.blink-cmp" },
 
   --- Tools
   -- { import = "astrocommunity.programming-language-support.kulala-nvim" },
@@ -40,7 +40,8 @@ return {
   { import = "astrocommunity.pack.yaml" }, --- allow jsonchema in yml
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.vue" },
-  { import = "astrocommunity.pack.angular" },
+  -- { import = "astrocommunity.pack.angular" },
+  { import = "astrocommunity.pack.astro" },
 
   { import = "astrocommunity.pack.markdown" },
 }
