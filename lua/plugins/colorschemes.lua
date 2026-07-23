@@ -16,6 +16,7 @@ return {
       -- colorscheme = "tokyonight",
       -- colorscheme = "oxocarbon",
       -- colorscheme = "oasis",
+      colorscheme = "sora",
     },
   },
 
@@ -37,7 +38,7 @@ return {
         astrodark = {
           ui = {
             -- background = "#1A1D23"
-            base = "#00151B"
+            base = "#00151B",
           },
         },
       },
@@ -193,5 +194,18 @@ return {
         floats = "dark", -- style for floating windows
       },
     },
+  },
+
+  {
+    "Aejkatappaja/sora",
+    lazy = true,
+    priority = 1000,
+    opts = {
+      transparent = false,
+    },
+    -- config = function(_, opts)
+    --   require("sora").setup(opts)
+    --   vim.cmd("colorscheme sora")
+    -- end,
   },
 }
