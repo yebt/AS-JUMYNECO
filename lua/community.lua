@@ -17,8 +17,8 @@ return {
   { import = "astrocommunity.code-runner.overseer-nvim" },
   -- WARN: moved to mini-files.lua
   -- { import = "astrocommunity.file-explorer.mini-files" },
-  --
   -- { import = "astrocommunity.completion.blink-cmp" },
+  { import = "astrocommunity.recipes.ai" },
 
   --- Tools
   -- { import = "astrocommunity.programming-language-support.kulala-nvim" },

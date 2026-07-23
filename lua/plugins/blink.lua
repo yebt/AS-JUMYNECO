@@ -5,7 +5,7 @@ return { -- override blink.cmp plugin
   -- -- build = "cargo build --release",
   -- build = function() require("blink.cmp").build():pwait() end,
   --
-  version = '1.*',
+  version = "1.*",
 
   dependencies = {
     "saghen/blink.lib",
@@ -15,7 +15,14 @@ return { -- override blink.cmp plugin
   opts = {
     fuzzy = { implementation = "prefer_rust_with_warning" },
     keymap = {
-      ["<Tab>"] = { "snippet_forward", "fallback" },
+      ["<Tab>"] = {
+        "snippet_forward",
+        function()
+          if vim.g.ai_accept then return vim.g.ai_accept() end
+        end,
+        "fallback",
+      },
+      ["<S-Tab>"] = { "snippet_backward", "fallback" },
       -- [""] = { function(cmp) cmp.show { providers = { "ripgrep" } } end },
       ["<M-k>"] = { "show_signature", "fallback" },
       ["<C-L>"] = {
@@ -32,16 +39,16 @@ return { -- override blink.cmp plugin
     completion = {
       menu = {
         -- border = "none",
-        border = "solid",
+        -- border = "solid",
         scrollbar = true,
         draw = {
           align_to = "label",
-          --         columns = {
-          --           { "kind_icon" },
-          --           { "label", "label_description", gap = 1 },
-          --           { "kind" },
-          --           { "source_name_3" },
-          --         },
+          columns = {
+            { "kind_icon" },
+            { "label", "label_description", gap = 1 },
+            { "kind" },
+            { "source_name_3" },
+          },
 
           components = {
             source_name_3 = {
@@ -50,13 +57,13 @@ return { -- override blink.cmp plugin
               highlight = "Comment",
             },
 
-            -- kind_icon = {
-            --   -- (optional) use highlights from mini.icons
-            --   highlight = function(ctx)
-            --     -- local _, hl =
-            --     return "CmpItemKind" .. ctx.kind
-            --   end,
-            -- },
+            kind_icon = {
+              -- (optional) use highlights from mini.icons
+              highlight = function(ctx)
+                -- local _, hl =
+                return "CmpItemKind" .. ctx.kind
+              end,
+            },
           },
         },
       },
