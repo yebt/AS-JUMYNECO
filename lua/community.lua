@@ -26,7 +26,7 @@ return {
   { import = "astrocommunity.ai.codecompanion-nvim" },
 
   --- Renders
-  -- { import = "astrocommunity.markdown-and-latex.markview-nvim" },
+  { import = "astrocommunity.markdown-and-latex.markview-nvim" },
   -- { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 
   --- Renders
