@@ -6,17 +6,22 @@ return {
     ---@type AstroUIOpts
     opts = {
       -- colorscheme = "astrodark",
+
       -- colorscheme = "catppuccin-mocha",
       -- colorscheme = "catppuccin",
       -- colorscheme = "catppuccin-nvim",
       -- colorscheme = "solarized-osaka",
       -- colorscheme = "koda",
-      -- colorscheme = "thorn",
       -- colorscheme = "gruvbox",
+
       -- colorscheme = "tokyonight",
-      -- colorscheme = "oxocarbon",
-      -- colorscheme = "oasis",
-      colorscheme = "sora",
+
+      --- Favorites
+      -- colorscheme = "sora",
+      -- colorscheme = "sora",
+      -- colorscheme = "flume-mira",
+      -- colorscheme = "oshen-night"
+      colorscheme = "monokai-pro",
     },
   },
 
@@ -53,21 +58,6 @@ return {
   },
 
   ---
-  -- {
-  --   "ThorstenRhau/token",
-  --   lazy = true,
-  -- },
-
-  ---
-  {
-    "jpwol/thorn.nvim",
-    lazy = true,
-    opts = {
-      background = "warm",
-    },
-  },
-
-  ---
   {
     "https://gitlab.com/motaz-shokry/gruvbox.nvim",
     name = "gruvbox",
@@ -86,25 +76,6 @@ return {
     },
   },
 
-  {
-    "nyoom-engineering/oxocarbon.nvim",
-    lazy = true,
-  },
-
-  {
-    "uhs-robert/oasis.nvim",
-    lazy = true,
-    opts = {
-      style = "starlight", -- lagoon, starlight
-    },
-  },
-
-  ---
-  {
-    "sainnhe/gruvbox-material",
-    lazy = true,
-  },
-
   ---
   {
     "54L1M/Oshen.nvim",
@@ -120,17 +91,6 @@ return {
     --   vim.cmd.colorscheme "oshen-night" -- or "oshen-day" for light
     -- end,
   },
-
-  {
-    "pmouraguedes/neodarcula.nvim",
-    lazy = true,
-    priority = 1000,
-  },
-
-  -- {
-  --   "https://gitlab.com/bartekjaszczak/distinct-nvim",
-  --   lazy = true,
-  -- },
 
   {
     "https://github.com/ThorstenRhau/token",
@@ -207,5 +167,38 @@ return {
     --   require("sora").setup(opts)
     --   vim.cmd("colorscheme sora")
     -- end,
+  },
+
+  {
+    "loctvl842/monokai-pro.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = {
+      filter = "ristretto", -- classic | octagon | pro | machine | ristretto | spectrum
+      -- override_palette = function(filter)
+      override_palette = function()
+        return {
+
+          dark2 = "#161413",
+          dark1 = "#0B0A09",
+          background = "#1c1917",
+
+          -- background = "#1A1B26",
+          -- text = "#C0CAF5",
+          -- accent1 = "#f7768e",
+          -- accent2 = "#7aa2f7",
+          -- accent3 = "#e0af68",
+          -- accent4 = "#9ece6a",
+          -- accent5 = "#0DB9D7",
+          -- accent6 = "#9d7cd8",
+          -- dimmed1 = "#737aa2",
+          -- dimmed2 = "#787c99",
+          -- dimmed3 = "#363b54",
+          -- dimmed4 = "#363b54",
+
+          dimmed5 = "#171513",
+        }
+      end,
+    },
   },
 }
