@@ -14,14 +14,14 @@ return {
       -- colorscheme = "koda",
       -- colorscheme = "gruvbox",
 
-      -- colorscheme = "tokyonight",
+      colorscheme = "tokyonight",
 
       --- Favorites
       -- colorscheme = "sora",
       -- colorscheme = "sora",
       -- colorscheme = "flume-mira",
       -- colorscheme = "oshen-night"
-      colorscheme = "monokai-pro",
+      -- colorscheme = "monokai-pro",
     },
   },
 
@@ -73,6 +73,88 @@ return {
     opts = {
       style = "night",
       dim_inactive = true,
+
+      -- Change the "hint" color to the "orange" color, and make the "error" color bright red
+      on_colors = function(colors)
+        colors.bg = "#121212"
+        colors.bg_dark = "#1e1e1e"
+        colors.bg_dark1 = "#222222"
+        colors.bg_float = "#181818"
+        -- colors.bg_highlight = "#282828"
+        -- colors.bg_popup = "#181818"
+        -- colors.bg_search = "#323232"
+        -- colors.bg_sidebar = "#181818"
+        -- colors.bg_statusline = "#181818"
+        -- colors.bg_visual = "#332333"
+        -- colors.black = "#121212"
+        -- colors.blue = "#6394bf"
+        -- colors.blue0 = "#4a7091"
+        -- colors.blue1 = "#54b1bf"
+        -- colors.blue2 = "#429988"
+        -- colors.blue5 = "#7cb2d6"
+        -- colors.blue6 = "#a0d1e8"
+        -- colors.blue7 = "#2d4458"
+        -- colors.border = "#2d2d2d"
+        -- colors.border_highlight = "#54b1bf"
+        -- colors.comment = "#758575"
+        -- colors.cyan = "#54b1bf"
+        -- colors.dark3 = "#333333"
+        -- colors.dark5 = "#2212122"
+        -- colors.diff = {
+        --   add = "#253b30",
+        --   change = "#27384a",
+        --   delete = "#3e2427",
+        --   text = "#2d4458",
+        -- }
+        -- colors.error = "#a14f55"
+        -- colors.fg = "#d4cfbf"
+        -- colors.fg_dark = "#a8a497"
+        -- colors.fg_float = "#d4cfbf"
+        -- colors.fg_gutter = "#555555"
+        -- colors.fg_sidebar = "#a8a497"
+        -- colors.git = {
+        --   add = "#4d9375",
+        --   change = "#6394bf",
+        --   delete = "#a14f55",
+        --   ignore = "#555555",
+        -- }
+        -- colors.green = "#a1b567"
+        -- colors.green1 = "#4d9375"
+        -- colors.green2 = "#429988"
+        -- colors.hint = "#429988"
+        -- colors.info = "#54b1bf"
+        -- colors.magenta = "#bd8f8f"
+        -- colors.magenta2 = "#db889a"
+        -- colors.none = "NONE"
+        -- colors.orange = "#e0a569"
+        -- colors.purple = "#bd8f8f"
+        -- colors.rainbow = { "#6394bf", "#e0a569", "#a1b567", "#429988", "#bd8f8f", "#c2b36e", "#dd8e6e", "#d48372" }
+        -- colors.red = "#d48372"
+        -- colors.red1 = "#a14f55"
+        -- colors.teal = "#429988"
+        -- colors.terminal = {
+        --   black = "#1e1e1e",
+        --   black_bright = "#333233",
+        --   blue = "#6394bf",
+        --   blue_bright = "#7cb2d6",
+        --   cyan = "#54b1bf",
+        --   cyan_bright = "#80ccd8",
+        --   green = "#a1b567",
+        --   green_bright = "#b8ce79",
+        --   magenta = "#bd8f8f",
+        --   magenta_bright = "#d4a9a9",
+        --   red = "#d48372",
+        --   red_bright = "#e69989",
+        --   white = "#a8a497",
+        --   white_bright = "#d4cfbf",
+        --   yellow = "#e0a569",
+        --   yellow_bright = "#f2bc85",
+        -- }
+        -- colors.terminal_black = "#333233"
+        -- colors.todo = "#6394bf"
+        -- colors.warning = "#e0a569"
+        -- colors.yellow = "#c2b36e"
+      end,
     },
   },
 
@@ -171,34 +253,11 @@ return {
 
   {
     "loctvl842/monokai-pro.nvim",
-    lazy = true,
+    lazy = false,
     priority = 1000,
-    opts = {
-      filter = "ristretto", -- classic | octagon | pro | machine | ristretto | spectrum
-      -- override_palette = function(filter)
-      override_palette = function()
-        return {
-
-          dark2 = "#161413",
-          dark1 = "#0B0A09",
-          background = "#1c1917",
-
-          -- background = "#1A1B26",
-          -- text = "#C0CAF5",
-          -- accent1 = "#f7768e",
-          -- accent2 = "#7aa2f7",
-          -- accent3 = "#e0af68",
-          -- accent4 = "#9ece6a",
-          -- accent5 = "#0DB9D7",
-          -- accent6 = "#9d7cd8",
-          -- dimmed1 = "#737aa2",
-          -- dimmed2 = "#787c99",
-          -- dimmed3 = "#363b54",
-          -- dimmed4 = "#363b54",
-
-          dimmed5 = "#171513",
-        }
-      end,
-    },
+    config = function()
+      require("monokai-pro").setup()
+      -- vim.cmd.colorscheme "monokai-pro"
+    end,
   },
 }

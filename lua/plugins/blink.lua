@@ -1,3 +1,4 @@
+-- 
 return { -- override blink.cmp plugin
   "saghen/blink.cmp",
   -- -- NOTE: force build
@@ -10,6 +11,10 @@ return { -- override blink.cmp plugin
   dependencies = {
     "saghen/blink.lib",
     "rafamadriz/friendly-snippets",
+    {
+      "mikavilpas/blink-ripgrep.nvim",
+      version = "*", -- use the latest stable version
+    },
   },
   --
   opts = {
@@ -32,6 +37,9 @@ return { -- override blink.cmp plugin
             initial_selected_item_idx = 1,
           }
         end,
+      },
+      ["<c-g>"] = {
+        function() require("blink-cmp").show { providers = { "ripgrep" } } end,
       },
     },
 
@@ -82,6 +90,20 @@ return { -- override blink.cmp plugin
 
       trigger = {
         enabled = false,
+      },
+    },
+
+    sources = {
+      providers = {
+
+        ripgrep = {
+          module = "blink-ripgrep",
+          name = "Ripgrep",
+          -- see the full configuration below for all available options
+          ---@module "blink-ripgrep"
+          ---@type blink-ripgrep.Options
+          opts = {},
+        },
       },
     },
   },
