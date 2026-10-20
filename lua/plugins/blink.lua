@@ -46,7 +46,7 @@ return { -- override blink.cmp plugin
     --
     completion = {
       menu = {
-        -- border = "none",
+        border = "none",
         -- border = "solid",
         scrollbar = true,
         draw = {

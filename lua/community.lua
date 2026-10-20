@@ -32,7 +32,7 @@ return {
   --- Renders
   { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.editing-support.nvim-context-vt" },
-  { import = "astrocommunity.editing-support.nvim-treesitter-context" },
+  -- { import = "astrocommunity.editing-support.nvim-treesitter-context" },
 
   --- Langs
   { import = "astrocommunity.pack.markdown" },
