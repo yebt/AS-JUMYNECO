@@ -1,0 +1,9 @@
+{
+  "todo item": {
+    "prefix": "tdi",
+    "body": [
+      "(A) ${1:Task description} ${2:due:${3:YYYY-MM-DD}} ${4:project:${5:ProjectName}} ${6:context:${7:@Context}}"
+    ],
+    "description": "Add todo.txt item with priority"
+  }
+}

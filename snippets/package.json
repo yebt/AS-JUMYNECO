@@ -30,6 +30,10 @@
         "path": "./vue/typescript.json"
       },
       {
+        "language": "todotxt",
+        "path": "./todotxt.json"
+      },
+      {
         "language": [
           "vue"
         ],
